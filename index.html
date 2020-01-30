@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Project 1 - Beer Me</title>
+    <link rel="stylesheet" href="reset.css" />
+    
+  
+    <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
+    />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    
+  <body>
+    <canvas id="canvas-basic"></canvas>
+    <div id="particles-js"></div>
+
+    <section class="hero auto">
+      <div class="hero-body" class="block">
+        <div class="container  has-text-centered" class="block">
+          <p id="header">
+            Beer Me
+          </p>
+          <h2 class="subtitle is-2">
+            Thirsty? We can help.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- </section> -->
+
+ 
+
+  <div class="container has-text-centered">
+    <div><h3 class="subtitle2">Find top recommended breweries in your area.</h3></div>
+    <div class="city">
+      <div class="field">
+        <div class="control">
+          <form id="searchForm">
+            <input id="cityInput" class="input is-warning is-medium is-rounded has-text-centered" type="text" placeholder="Enter A City">
+          </form>
+        </div>
+      </div>
+      <button class="button is-light is-center" id="findBtn">
+        &nbsp <i class="fas fa-beer"></i> &nbsp Find Breweries
+      </button>
+    </div>
+  </div>
+
+  <div class="column is-10 is-offset-1">
+    <div class="map" id="streetMap"></div>
+    <div id="map" style="height: 450px; display: none;"></div>
+  </div>
+
+  <div class="block">
+    <div class="brewery" id="brewList"></div>
+
+  </div>
+  <div class="column is-6 is-offset-3">
+    <div id="cardDiv" class="card" style="display: none;">
+      <div class="card-image">
+        <figure class="image is-2by2">
+          <img id="cardImg" src="">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="breweryName">
+            <p id="breweryName" class="title is-2">Brewery Name</p>
+          </div>
+        </div>
+        <div id="breweryPrice" class="title is-5">Price
+        </div>
+        <div id="breweryDes" class="title is-6">
+        </div>
+
+        <div id="breweryAddress" class="title is-5">281 Bleecker St (at Jones St)<br>New York, NY 10014
+        </div>
+
+        <div id="breweryWebsite" class="title is-5 a"><a href="www.google.com">Google.com</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="granim.js"></script>
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="particles.js"></script>
+  </body>
+</html>
