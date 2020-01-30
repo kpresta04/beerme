@@ -12,9 +12,11 @@ $(document).ready(function() {
         method: "GET"
       }).then(function(response) {
         // Expand tooltip to show more info
-        $(parentEl).append(
-          `<p>Price rating: ${response.response.venue.price.currency}</p>`
-        );
+        if (response.response.venue.price.currency !== undefined) {
+          $(parentEl).append(
+            `<p>Price rating: ${response.response.venue.price.currency}</p>`
+          );
+        }
 
         if (response.response.venue.description !== undefined) {
           $(parentEl).append(`<p>${response.response.venue.description}</p>`);
@@ -24,9 +26,12 @@ $(document).ready(function() {
             `<p>${response.response.venue.contact.formattedPhone}</p>`
           );
         }
-        $(parentEl).append(
-          `<a href="${response.response.venue.url}">${response.response.venue.url}</a>`
-        );
+        if (response.response.venue.url !== undefined) {
+          $(parentEl).append(
+            `<a href="${response.response.venue.url}">${response.response.venue.url}</a>`
+          );
+        }
+
         $(e.target.parentElement).remove(); // delete 'More details' link
       });
     }
