@@ -12,6 +12,10 @@ Beer Me is an app designed to help those thirsty beer connoisseurs locate a loca
 
 At Beer Me, we wanted to build out a beer-specific app to cut through the noise and get to the heart of delicious beers available within a close proximity.
 
+## Link to deployed app
+
+https://kpresta04.github.io/beerme/
+
 ## Screenshots
 
 ![BeerMe](https://user-images.githubusercontent.com/56936352/73216540-c9930780-411b-11ea-8f59-0eccb069f68f.png)
